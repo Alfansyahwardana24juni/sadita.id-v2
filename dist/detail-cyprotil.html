@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#410000",
+                        "inverse-primary": "#ffb4a8",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "inverse-on-surface": "#f3f0f0",
+                        "tertiary-fixed": "#e2e2e2",
+                        "secondary-container": "#dcdddd",
+                        "surface-bright": "#fcf9f8",
+                        "surface": "#fcf9f8",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "secondary": "#5d5f5f",
+                        "surface-container-low": "#f6f3f2",
+                        "inverse-surface": "#303030",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#610000",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-dim": "#dcd9d9",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "tertiary-container": "#414343",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-secondary-container": "#5f6161",
+                        "surface-container": "#f0eded",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#920703",
+                        "on-surface-variant": "#5a403c",
+                        "error-container": "#ffdad6",
+                        "outline": "#8e706b",
+                        "primary-container": "#8b0000",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1b1c1c",
+                        "surface-tint": "#b52619",
+                        "on-surface": "#1b1c1c",
+                        "surface-variant": "#e4e2e1",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#eae7e7",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-tertiary-container": "#afafb0",
+                        "background": "#fcf9f8",
+                        "primary-fixed": "#ffdad4",
+                        "surface-container-highest": "#e4e2e1",
+                        "outline-variant": "#e3beb8",
+                        "on-primary-container": "#ff907f",
+                        "tertiary": "#2b2d2d",
+                        "secondary-fixed": "#e2e2e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter-grid": "1rem",
+                        "margin-main": "1.25rem",
+                        "stack-sm": "0.5rem",
+                        "stack-lg": "2rem",
+                        "container-max": "512px",
+                        "stack-md": "1rem"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "display-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["10px", { "lineHeight": "14px", "fontWeight": "500" }],
+                        "headline-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-lg": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-surface-container-low min-h-screen">
+    <div class="max-w-[512px] mx-auto bg-white min-h-screen relative pb-32">
+        <!-- TopAppBar (From Shared Components) -->
+        <header
+            class="bg-white dark:bg-gray-950 fixed top-0 max-w-[512px] w-full border-b border-gray-200 dark:border-gray-800 shadow-[0px_4px_20px_rgba(0,0,0,0.05)] flex justify-between items-center h-16 px-5 z-50 mx-auto left-0 right-0">
+            <div class="flex items-center gap-4">
+                <button onclick="window.location.href='katalog.html'"
+                    class="active:opacity-70 transition-all duration-200">
+                    <span class="material-symbols-outlined text-red-900 dark:text-red-500">arrow_back</span>
+                </button>
+                <h1 class="text-lg font-bold tracking-tight text-red-900 dark:text-red-500">SADITA</h1>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="katalog.html" class="material-symbols-outlined text-red-900 dark:text-red-500">search</a>
+                <a href="checkout.html"
+                    class="material-symbols-outlined text-red-900 dark:text-red-500">shopping_cart</a>
+            </div>
+        </header>
+        <!-- Product Hero Image Section -->
+        <div class="pt-16">
+            <div class="relative w-full aspect-square bg-white flex items-center justify-center p-8">
+                <img class="w-full h-full object-contain"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtjEat40Lt5OByTyb4pJsi1h08WRz550s4YEp7htUQxT4BSKk0kZFqpS7DukLxVyOkH0IzeSaQquQVnKV1md6qiL8WWDGGVSiR18IcmT7SdK_w7JU_4Fgh1TSbd1_9kdcykooAId65r2tDbw30vKK21ydt9lOWcwzbltknSB3NeJhlhUnXMECQi4wt_rK7FSf83cbFXRVLB96qXSiA62enWECXaaZOqmAKoLSPyj82aH6OHLI7QW8uV8RAb592xzLO9U2-AhBqvclL" />
+                <div
+                    class="absolute bottom-4 right-5 bg-white/80 backdrop-blur-md border border-outline-variant px-3 py-1 rounded-full flex items-center gap-1 shadow-sm">
+                    <span class="material-symbols-outlined text-[16px] text-primary">zoom_in</span>
+                    <span class="font-label-lg text-label-lg text-primary">Perbesar Gambar</span>
+                </div>
+            </div>
+        </div>
+        <!-- Product Info Header -->
+        <section class="px-5 mt-6">
+            <div class="flex items-center gap-2 mb-2">
+                <span
+                    class="bg-primary text-white font-label-lg text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider">Terlaris</span>
+                <span
+                    class="bg-surface-container-highest text-on-surface font-label-lg text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider">Antibiotik</span>
+            </div>
+            <h2 class="font-display-sm text-display-sm text-on-surface leading-tight">Cyprotil 250 mg</h2>
+            <p class="font-body-md text-body-md text-secondary mt-1">Ciprofloxacin &amp; Tylosin Tartrate Soluble Powder
+            </p>
+            <div class="flex items-baseline gap-2 mt-4">
+                <span class="font-display-sm text-display-sm text-primary">Rp 85.000</span>
+                <span class="font-body-md text-body-md text-secondary line-through">Rp 105.000</span>
+            </div>
+        </section>
+        <!-- Variant Selector -->
+        <section class="px-5 mt-8">
+            <h3 class="font-label-lg text-label-lg text-on-surface mb-3 uppercase">Pilih Kemasan</h3>
+            <div class="flex gap-3">
+                <button data-size="100g" onclick="selectVariant(this)"
+                    class="variant-btn flex-1 border-2 border-primary bg-primary-fixed text-on-primary-fixed py-3 px-4 rounded-xl flex flex-col items-center">
+                    <span class="font-headline-md text-headline-md">100g</span>
+                    <span class="font-label-sm text-label-sm">Sachet</span>
+                </button>
+                <button data-size="250g" onclick="selectVariant(this)"
+                    class="variant-btn flex-1 border border-outline-variant bg-white text-on-surface py-3 px-4 rounded-xl flex flex-col items-center">
+                    <span class="font-headline-md text-headline-md">250g</span>
+                    <span class="font-label-sm text-label-sm text-secondary">Sachet</span>
+                </button>
+                <button data-size="1kg" onclick="selectVariant(this)"
+                    class="variant-btn flex-1 border border-outline-variant bg-white text-on-surface py-3 px-4 rounded-xl flex flex-col items-center">
+                    <span class="font-headline-md text-headline-md">1kg</span>
+                    <span class="font-label-sm text-label-sm text-secondary">Canister</span>
+                </button>
+            </div>
+        </section>
+        <!-- Product USP (Unique Selling Points) -->
+        <section class="px-5 mt-10">
+            <div class="bg-surface-container-lowest border border-outline-variant rounded-2xl p-5 shadow-sm">
+                <h3 class="font-headline-md text-headline-md text-on-surface mb-4">Mengapa Cyprotil?</h3>
+                <div class="space-y-4">
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-primary">health_and_safety</span>
+                        </div>
+                        <div>
+                            <p class="font-label-lg text-label-lg text-on-surface">Spektrum Luas</p>
+                            <p class="font-body-md text-body-md text-secondary">Efektif melawan CRD Kompleks, Coryza,
+                                dan Colibacillosis.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-primary">bolt</span>
+                        </div>
+                        <div>
+                            <p class="font-label-lg text-label-lg text-on-surface">Reaksi Cepat</p>
+                            <p class="font-body-md text-body-md text-secondary">Mudah larut dalam air minum dan cepat
+                                diserap tubuh ternak.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-primary">verified</span>
+                        </div>
+                        <div>
+                            <p class="font-label-lg text-label-lg text-on-surface">Standar Medis</p>
+                            <p class="font-body-md text-body-md text-secondary">Kualitas terjamin dengan pengawasan
+                                apoteker hewan profesional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Technical Information (Accordion) -->
+        <section class="mt-10 px-5">
+            <div class="divide-y divide-outline-variant">
+                <details class="group py-4" open="">
+                    <summary class="flex items-center justify-between list-none cursor-pointer">
+                        <span class="font-headline-md text-headline-md text-on-surface">Indikasi</span>
+                        <span
+                            class="material-symbols-outlined transition-transform group-open:rotate-180 text-secondary">expand_more</span>
+                    </summary>
+                    <div class="mt-4 font-body-md text-body-md text-secondary leading-relaxed">
+                        Diindikasikan untuk pengobatan penyakit saluran pernapasan pada ayam yang disebabkan oleh
+                        Mycoplasma gallisepticum (CRD), Mycoplasma synoviae, serta infeksi sekunder yang disebabkan oleh
+                        E. coli.
+                    </div>
+                </details>
+                <details class="group py-4">
+                    <summary class="flex items-center justify-between list-none cursor-pointer">
+                        <span class="font-headline-md text-headline-md text-on-surface">Dosis &amp; Aturan Pakai</span>
+                        <span
+                            class="material-symbols-outlined transition-transform group-open:rotate-180 text-secondary">expand_more</span>
+                    </summary>
+                    <div class="mt-4 font-body-md text-body-md text-secondary leading-relaxed">
+                        Larutkan 1 gram Cyprotil dalam 2-4 liter air minum. Berikan selama 3-5 hari berturut-turut.
+                        Ganti air minum setiap 24 jam dengan larutan yang baru.
+                    </div>
+                </details>
+                <details class="group py-4">
+                    <summary class="flex items-center justify-between list-none cursor-pointer">
+                        <span class="font-headline-md text-headline-md text-on-surface">Komposisi</span>
+                        <span
+                            class="material-symbols-outlined transition-transform group-open:rotate-180 text-secondary">expand_more</span>
+                    </summary>
+                    <div class="mt-4 space-y-2">
+                        <div class="flex justify-between font-body-md text-body-md">
+                            <span class="text-on-surface">Ciprofloxacin</span>
+                            <span class="text-secondary">100 mg</span>
+                        </div>
+                        <div class="flex justify-between font-body-md text-body-md">
+                            <span class="text-on-surface">Tylosin Tartrate</span>
+                            <span class="text-secondary">150 mg</span>
+                        </div>
+                        <div class="flex justify-between font-body-md text-body-md">
+                            <span class="text-on-surface">Bahan Pembantu ad</span>
+                            <span class="text-secondary">1 g</span>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+        <!-- Safety Notice -->
+        <section class="px-5 mt-6">
+            <div class="bg-error-container/30 border-l-4 border-error p-4 rounded-r-xl flex gap-3">
+                <span class="material-symbols-outlined text-error">warning</span>
+                <p class="font-body-md text-body-md text-on-error-container italic">
+                    Hentikan pemakaian obat 5 hari sebelum ternak dipotong untuk dikonsumsi.
+                </p>
+            </div>
+        </section>
+        <!-- Related Products -->
+        <section class="mt-12 px-5 pb-10">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="font-headline-md text-headline-md text-on-surface">Pelengkap Terapi</h3>
+                <a class="font-label-lg text-label-lg text-primary uppercase" href="katalog.html">Lihat Semua</a>
+            </div>
+            <div class="flex gap-4 overflow-x-auto hide-scrollbar">
+                <!-- Product Card 1 -->
+                <div class="min-w-[160px] border border-outline-variant rounded-xl overflow-hidden bg-white">
+                    <div class="h-32 bg-surface-container overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJC6W5guoqggl2TC323YynK6TmTjJzhLC5GfIA_D8duAF1MXvxVtKEBl9_AdLeS_lfQnHvB3-64jhG3lXRC0fu8X98PX-8qSx1H4I9O5hrYErtJjWqRps8Q3Lh5lj6wQR5WCLNoIQAKdER8VtIK3iSDal70FZiHRh6ss0AyJ9n2Z4qHFRJEJXmB4Zx4oNYHpQJ8swfX95FfLCwOLwTwsyFEuM143cNcZw4jyghrXda3beOEvN9HcPC7qMNrxx0Ew5LtnKGuas2QlUh" />
+                    </div>
+                    <div class="p-3">
+                        <h4 class="font-label-lg text-label-lg text-on-surface line-clamp-1">Vit-Strong B-Complex</h4>
+                        <p class="font-body-md text-body-md text-primary mt-1">Rp 45.000</p>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="min-w-[160px] border border-outline-variant rounded-xl overflow-hidden bg-white">
+                    <div class="h-32 bg-surface-container overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2SMHznL9ZnUIrdBRMbfk_XLHYmtPqnpeRXRtc15YTrHLg65u4A0P-Vq9RXXER2ibTnV2XVCc1Xq5x61yG0P1Enlkt24qLZTGHvd8Q3AdTF7hc6sD11YniwsPF6a-30wG0MqgDgdFqih0WJB-MRXLALi7wqfik5ZvA7cmPh70GlrsHqXB2Hjdj6zp14wYY3s1Nr7g0-yPx_ZHNynHuIuCxsgnnimE2vxZFqkIP39oDAM_ZBvIiOqi7fnQp3mgghwfugQyOAkPHCyIh" />
+                    </div>
+                    <div class="p-3">
+                        <h4 class="font-label-lg text-label-lg text-on-surface line-clamp-1">Electrolyte Pro</h4>
+                        <p class="font-body-md text-body-md text-primary mt-1">Rp 32.500</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sticky Footer Action -->
+        <div
+            class="fixed bottom-0 max-w-[512px] w-full bg-white/90 backdrop-blur-md border-t border-outline-variant p-5 z-[60] flex gap-4 items-center">
+            <button onclick="window.location.href='chat.html'"
+                class="h-12 w-12 border border-outline rounded-xl flex items-center justify-center text-on-surface active:scale-95 transition-transform">
+                <span class="material-symbols-outlined">chat</span>
+            </button>
+            <button onclick="addToCart()"
+                class="h-12 w-12 border border-outline rounded-xl flex items-center justify-center text-on-surface active:scale-95 transition-transform">
+                <span class="material-symbols-outlined">add_shopping_cart</span>
+            </button>
+            <button onclick="buyNow()"
+                class="h-12 flex-1 bg-primary text-white rounded-xl font-headline-md flex items-center justify-center gap-2 shadow-lg shadow-primary/20 active:scale-[0.98] transition-transform">
+                <span>Beli Sekarang</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </button>
+        </div>
+    </div>
+</body>
+
+<script>
+    let selectedVariant = null;
+    function selectVariant(el) {
+        document.querySelectorAll('.variant-btn').forEach(b => {
+            b.classList.remove('ring', 'ring-primary');
+            b.classList.remove('bg-primary-fixed');
+            b.classList.remove('text-on-primary-fixed');
+            b.classList.remove('bg-white');
+        });
+        el.classList.add('ring', 'ring-primary');
+        selectedVariant = el.getAttribute('data-size');
+    }
+    function addToCart() {
+        const variants = document.querySelectorAll('.variant-btn');
+        if (variants.length > 0 && !selectedVariant) {
+            alert('Pilih ukuran kemasan terlebih dahulu.');
+            return;
+        }
+        // demo behaviour: navigate to checkout
+        window.location.href = 'checkout.html';
+    }
+    function buyNow() {
+        const variants = document.querySelectorAll('.variant-btn');
+        if (variants.length > 0 && !selectedVariant) {
+            alert('Pilih ukuran kemasan terlebih dahulu.');
+            return;
+        }
+        window.location.href = 'checkout.html';
+    }
+</script>
+
+</html>

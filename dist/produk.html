@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SADITA - Produk Kesehatan Hewan</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#454747",
+                        "secondary-container": "#dcdddd",
+                        "surface-container-low": "#f6f3f2",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-surface": "#1b1c1c",
+                        "on-secondary": "#ffffff",
+                        "background": "#fcf9f8",
+                        "surface-container": "#f0eded",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#2b2d2d",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#ff907f",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "surface-variant": "#e4e2e1",
+                        "on-error-container": "#93000a",
+                        "secondary": "#5d5f5f",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-tertiary-container": "#afafb0",
+                        "outline": "#8e706b",
+                        "surface-container-high": "#eae7e7",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-primary-fixed": "#410000",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-primary": "#ffffff",
+                        "primary": "#610000",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface": "#fcf9f8",
+                        "on-secondary-fixed-variant": "#454747",
+                        "outline-variant": "#e3beb8",
+                        "surface-dim": "#dcd9d9",
+                        "primary-container": "#8b0000",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#ffdad4",
+                        "surface-tint": "#b52619",
+                        "inverse-on-surface": "#f3f0f0",
+                        "tertiary-container": "#414343",
+                        "inverse-primary": "#ffb4a8",
+                        "on-background": "#1b1c1c",
+                        "inverse-surface": "#303030",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#5f6161",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "on-surface-variant": "#5a403c",
+                        "surface-bright": "#fcf9f8",
+                        "on-primary-fixed-variant": "#920703"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "512px",
+                        "stack-md": "1rem",
+                        "margin-main": "1.25rem",
+                        "gutter-grid": "1rem",
+                        "stack-sm": "0.5rem",
+                        "stack-lg": "2rem"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "display-sm": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "display-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["10px", { "lineHeight": "14px", "fontWeight": "500" }],
+                        "label-lg": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface">
+    <!-- TopAppBar -->
+    <header
+        class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[512px] z-50 flex items-center justify-between px-5 h-16 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none font-sans antialiased text-gray-900 dark:text-gray-100">
+        <div class="text-xl font-bold tracking-tight text-red-900 dark:text-red-500">SADITA</div>
+        <div class="flex gap-4">
+            <span class="material-symbols-outlined text-gray-500 cursor-pointer" data-icon="language">language</span>
+            <span class="material-symbols-outlined text-gray-500 cursor-pointer" data-icon="menu">menu</span>
+        </div>
+    </header>
+    <!-- Main Content Canvas -->
+    <main class="mx-auto max-w-[512px] pt-16 pb-20 bg-surface">
+        <!-- Search Section -->
+        <section class="px-5 mt-6">
+            <div class="relative">
+                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-secondary"
+                    data-icon="search">search</span>
+                <input
+                    class="w-full pl-11 pr-4 py-3 bg-white border border-secondary-container rounded-xl focus:ring-1 focus:ring-primary focus:border-primary transition-all font-body-md outline-none"
+                    placeholder="Cari obat atau kategori..." type="text" />
+            </div>
+        </section>
+        <!-- Filter Chips Section -->
+        <section class="mt-6">
+            <div class="flex overflow-x-auto gap-2 px-5 no-scrollbar">
+                <button
+                    class="flex-none px-5 py-2 bg-primary text-on-primary rounded-full font-label-lg whitespace-nowrap">Semua</button>
+                <button
+                    class="flex-none px-5 py-2 bg-surface-container-highest text-on-surface-variant rounded-full font-label-lg whitespace-nowrap hover:bg-surface-variant transition-colors">Antibiotik</button>
+                <button
+                    class="flex-none px-5 py-2 bg-surface-container-highest text-on-surface-variant rounded-full font-label-lg whitespace-nowrap hover:bg-surface-variant transition-colors">Vitamin</button>
+                <button
+                    class="flex-none px-5 py-2 bg-surface-container-highest text-on-surface-variant rounded-full font-label-lg whitespace-nowrap hover:bg-surface-variant transition-colors">Akuatik</button>
+                <button
+                    class="flex-none px-5 py-2 bg-surface-container-highest text-on-surface-variant rounded-full font-label-lg whitespace-nowrap hover:bg-surface-variant transition-colors">Vaksin</button>
+            </div>
+        </section>
+        <!-- Category Grid Section -->
+        <section class="px-5 mt-8 mb-10">
+            <h2 class="font-headline-md text-on-surface mb-4">Kategori Produk</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <!-- Card: Antibiotik -->
+                <div
+                    class="group bg-white p-4 rounded-xl border border-secondary-container shadow-sm hover:border-primary transition-all cursor-pointer">
+                    <div
+                        class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-colors">
+                        <span class="material-symbols-outlined text-primary" data-icon="medication">medication</span>
+                    </div>
+                    <h3 class="font-label-lg text-on-surface">Antibiotik</h3>
+                    <p class="text-[10px] text-secondary mt-1">Pengendalian infeksi bakteri</p>
+                </div>
+                <!-- Card: Vitamin -->
+                <div
+                    class="group bg-white p-4 rounded-xl border border-secondary-container shadow-sm hover:border-primary transition-all cursor-pointer">
+                    <div
+                        class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-colors">
+                        <span class="material-symbols-outlined text-primary" data-icon="pill">pill</span>
+                    </div>
+                    <h3 class="font-label-lg text-on-surface">Vitamin</h3>
+                    <p class="text-[10px] text-secondary mt-1">Suplemen nutrisi esensial</p>
+                    <p class="text-sm text-secondary mt-1">Stok: <span class="font-bold">12</span></p>
+                </div>
+                <!-- Card: Anti Coccidia -->
+                <div
+                    class="group bg-white p-4 rounded-xl border border-secondary-container shadow-sm hover:border-primary transition-all cursor-pointer">
+                    <div
+                        class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-colors">
+                        <span class="material-symbols-outlined text-primary"
+                            data-icon="microbiology">microbiology</span>
+                    </div>
+                    <h3 class="font-label-lg text-on-surface">Anti Coccidia</h3>
+                    <p class="text-[10px] text-secondary mt-1">Pencegahan koksidiosis</p>
+                </div>
+                <!-- Card: Antiparasit -->
+                <div
+                    class="group bg-white p-4 rounded-xl border border-secondary-container shadow-sm hover:border-primary transition-all cursor-pointer">
+                    <div
+                        class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-colors">
+                        <span class="material-symbols-outlined text-primary" data-icon="bug_report">bug_report</span>
+                    </div>
+                    <h3 class="font-label-lg text-on-surface">Antiparasit</h3>
+                    <p class="text-[10px] text-secondary mt-1">Pembasmi kutu &amp; cacing</p>
+                </div>
+                <!-- Card: Disinfektan -->
+                <div
+                    class="group bg-white p-4 rounded-xl border border-secondary-container shadow-sm hover:border-primary transition-all cursor-pointer">
+                    <div
+                        class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-colors">
+                        <span class="material-symbols-outlined text-primary" data-icon="sanitizer">sanitizer</span>
+                    </div>
+                    <h3 class="font-label-lg text-on-surface">Disinfektan</h3>
+                    <p class="text-[10px] text-secondary mt-1">Kebersihan kandang &amp; alat</p>
+                </div>
+                <!-- Card: Premix -->
+                <div
+                    class="group bg-white p-4 rounded-xl border border-secondary-container shadow-sm hover:border-primary transition-all cursor-pointer">
+                    <div
+                        class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-colors">
+                        <span class="material-symbols-outlined text-primary" data-icon="science">science</span>
+                    </div>
+                    <h3 class="font-label-lg text-on-surface">Premix</h3>
+                    <p class="text-[10px] text-secondary mt-1">Campuran pakan berkualitas</p>
+                </div>
+                <!-- Card: Akuatik -->
+                <div
+                    class="group bg-white p-4 rounded-xl border border-secondary-container shadow-sm hover:border-primary transition-all cursor-pointer">
+                    <div
+                        class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-colors">
+                        <span class="material-symbols-outlined text-primary" data-icon="set_meal">set_meal</span>
+                    </div>
+                    <h3 class="font-label-lg text-on-surface">Akuatik</h3>
+                    <p class="text-[10px] text-secondary mt-1">Obat ikan &amp; udang</p>
+                </div>
+                <!-- Card: Produk PMK -->
+                <div
+                    class="group bg-white p-4 rounded-xl border border-secondary-container shadow-sm hover:border-primary transition-all cursor-pointer">
+                    <div
+                        class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-colors">
+                        <span class="material-symbols-outlined text-primary" data-icon="vaccines">vaccines</span>
+                    </div>
+                    <h3 class="font-label-lg text-on-surface">Produk PMK</h3>
+                    <p class="text-[10px] text-secondary mt-1">Penanganan kuku &amp; mulut</p>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Banner -->
+        <section class="px-5 mb-8">
+            <div class="relative h-40 rounded-xl overflow-hidden shadow-sm">
+                <img alt="Veterinary Health" class="absolute inset-0 w-full h-full object-cover"
+                    data-alt="professional veterinarian examining a cow in a clean clinical setting with modern equipment and soft natural lighting"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnI1JM3DKl1SyFxLIHylQyhHui8K_ai0j04n--Hp_LzpUsyO5SikIaWNTDn1B9OThpCBLjCC3kUcd4PYaPPheDutTdrl4wTjBydB_POZfKXiOC4aERomLPTpdRMbRElB8HVsPiak8k59_qZo8Dww3sFuGppGLzQVvJ_mvNmqJyd2L6H_h3JkpZLbyJykiou_s3kLTKktOVbQqmaSI2zThr-b-arqAAHbjgAcRUW_14eBMRTc3O2TBy7iK0q3PeQuf8iRNFwKBboo2c" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-primary/90 to-transparent flex flex-col justify-center px-6">
+                    <span class="text-[10px] uppercase tracking-widest text-white/80 font-bold mb-1">Promo Bulan
+                        Ini</span>
+                    <h2 class="text-white font-headline-md leading-tight max-w-[180px]">Diskon 15% Paket Vaksinasi</h2>
+                    <button
+                        class="mt-3 w-max px-4 py-1.5 bg-white text-primary text-[10px] font-bold rounded-lg active:scale-95 transition-transform">Cek
+                        Sekarang</button>
+                </div>
+            </div>
+        </section>
+        <!-- Footer Info -->
+        <footer class="px-5 py-10 bg-surface-container-low border-t border-secondary-container text-center mb-10">
+            <div class="text-primary font-bold text-lg mb-2">SADITA</div>
+            <p class="text-secondary text-[12px] leading-relaxed mb-4">Penyedia solusi kesehatan hewan terpercaya dengan
+                kualitas medis standar global.</p>
+            <div class="flex justify-center gap-4 text-secondary">
+                <span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+                <span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+                <span class="material-symbols-outlined" data-icon="mail">mail</span>
+            </div>
+            <p class="text-secondary text-[10px] mt-6">© 2024 SADITA Animal Health</p>
+        </footer>
+    </main>
+    <!-- BottomNavBar -->
+    <nav
+        class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[512px] z-50 flex justify-around items-center h-16 pb-safe bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+        <a class="flex flex-col items-center justify-center text-gray-500 dark:text-gray-400 hover:text-red-800 transition-transform active:scale-95"
+            href="index.html">
+            <span class="material-symbols-outlined" data-icon="home">home</span>
+            <span class="text-[10px] font-medium font-sans">Beranda</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-gray-500 dark:text-gray-400 hover:text-red-800 transition-transform active:scale-95"
+            href="tentangkami.html">
+            <span class="material-symbols-outlined" data-icon="info">info</span>
+            <span class="text-[10px] font-medium font-sans">Tentang</span>
+        </a>
+        <!-- Active Tab: Produk -->
+        <a class="flex flex-col items-center justify-center text-red-900 dark:text-red-500 font-bold transition-transform active:scale-95"
+            href="produk.html">
+            <span class="material-symbols-outlined" data-icon="medication"
+                style="font-variation-settings: 'FILL' 1;">medication</span>
+            <span class="text-[10px] font-medium font-sans">Produk</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-gray-500 dark:text-gray-400 hover:text-red-800 transition-transform active:scale-95"
+            href="artikel.html">
+            <span class="material-symbols-outlined" data-icon="newspaper">newspaper</span>
+            <span class="text-[10px] font-medium font-sans">Artikel</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-gray-500 dark:text-gray-400 hover:text-red-800 transition-transform active:scale-95"
+            href="chat.html">
+            <span class="material-symbols-outlined" data-icon="forum">forum</span>
+            <span class="text-[10px] font-medium font-sans">Chat</span>
+        </a>
+    </nav>
+</body>
+
+</html>

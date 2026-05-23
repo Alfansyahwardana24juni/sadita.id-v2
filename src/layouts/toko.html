@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>{% block title %}SADITA Toko — Belanja Produk Kesehatan Hewan{% endblock %}</title>
+    <meta name="description" content="{% block description %}Beli produk kesehatan hewan dan peternakan berkualitas langsung dari gudang SADITA terdekat.{% endblock %}" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <!-- Shared CSS (Build output) -->
+    <link rel="stylesheet" href="src/styles/tailwind.css">
+
+    {% block extra_styles %}{% endblock %}
+</head>
+
+<body class="bg-surface text-on-surface flex justify-center min-h-screen">
+    <!-- App Wrapper (mobile-first, max 512px) -->
+    <div class="w-full max-w-[512px] bg-background min-h-screen {% block pb_class %}pb-20{% endblock %} relative shadow-2xl overflow-x-hidden">
+
+        {% block header %}
+            {% include "src/components/navbar-toko.html" %}
+        {% endblock %}
+
+        <main class="{% block main_class %}pt-16{% endblock %}">
+            {% block content %}{% endblock %}
+        </main>
+
+        {% block bottom_navigation %}
+            {% include "src/components/bottom-nav-toko.html" %}
+        {% endblock %}
+
+    </div>
+
+    <!-- Shared Scripts -->
+    <script type="module" src="src/scripts/main.js"></script>
+    {% block extra_scripts %}{% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>{% block title %}SADITA - Solusi Sehat Ternak Anda{% endblock %}</title>
+    <meta name="description"
+        content="{% block description %}Partner terpercaya dalam industri kesehatan hewan dan peternakan di Indonesia.{% endblock %}" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <!-- Optimized CSS (Build output will be at this path in dist) -->
+    <link rel="stylesheet" href="src/styles/tailwind.css">
+</head>
+
+<body class="bg-surface text-on-surface flex justify-center min-h-screen">
+    <!-- App Wrapper -->
+    <div class="w-full max-w-[512px] bg-background min-h-screen pb-32 relative shadow-2xl overflow-x-hidden">
+
+        {% block header %}
+        {% include "src/components/navbar.html" %}
+        {% endblock %}
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        {% block footer_content %}
+        {% include "src/components/footer.html" %}
+        {% endblock %}
+
+        {% block bottom_navigation %}
+        {% include "src/components/bottom-nav.html" %}
+        {% endblock %}
+    </div>
+
+    <!-- Main JavaScript -->
+    <script type="module" src="src/scripts/main.js"></script>
+</body>
+
+</html>
