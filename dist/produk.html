@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>SADITA - Produk Kesehatan Hewan</title>
+    <meta http-equiv="refresh" content="0; url=katalog.html" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
         rel="stylesheet" />
@@ -121,11 +122,10 @@
     <!-- TopAppBar -->
     <header
         class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[512px] z-50 flex items-center justify-between px-5 h-16 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none font-sans antialiased text-gray-900 dark:text-gray-100">
-        <div class="text-xl font-bold tracking-tight text-red-900 dark:text-red-500">SADITA</div>
-        <div class="flex gap-4">
-            <span class="material-symbols-outlined text-gray-500 cursor-pointer" data-icon="language">language</span>
-            <span class="material-symbols-outlined text-gray-500 cursor-pointer" data-icon="menu">menu</span>
-        </div>
+        <a href="index.html" class="text-xl font-bold tracking-tight text-red-900 dark:text-red-500">SADITA</a>
+        <a href="toko.html" class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white" aria-label="Buka toko SADITA">
+            <span class="material-symbols-outlined">storefront</span>
+        </a>
     </header>
     <!-- Main Content Canvas -->
     <main class="mx-auto max-w-[512px] pt-16 pb-20 bg-surface">
@@ -142,16 +142,16 @@
         <!-- Filter Chips Section -->
         <section class="mt-6">
             <div class="flex overflow-x-auto gap-2 px-5 no-scrollbar">
-                <button
-                    class="flex-none px-5 py-2 bg-primary text-on-primary rounded-full font-label-lg whitespace-nowrap">Semua</button>
-                <button
-                    class="flex-none px-5 py-2 bg-surface-container-highest text-on-surface-variant rounded-full font-label-lg whitespace-nowrap hover:bg-surface-variant transition-colors">Antibiotik</button>
-                <button
-                    class="flex-none px-5 py-2 bg-surface-container-highest text-on-surface-variant rounded-full font-label-lg whitespace-nowrap hover:bg-surface-variant transition-colors">Vitamin</button>
-                <button
-                    class="flex-none px-5 py-2 bg-surface-container-highest text-on-surface-variant rounded-full font-label-lg whitespace-nowrap hover:bg-surface-variant transition-colors">Akuatik</button>
-                <button
-                    class="flex-none px-5 py-2 bg-surface-container-highest text-on-surface-variant rounded-full font-label-lg whitespace-nowrap hover:bg-surface-variant transition-colors">Vaksin</button>
+                <a href="produk.html"
+                    class="flex-none px-5 py-2 bg-primary text-on-primary rounded-full font-label-lg whitespace-nowrap">Semua</a>
+                <a href="detailkategori.html"
+                    class="flex-none px-5 py-2 bg-surface-container-highest text-on-surface-variant rounded-full font-label-lg whitespace-nowrap hover:bg-surface-variant transition-colors">Antibiotik</a>
+                <a href="detailkategori.html"
+                    class="flex-none px-5 py-2 bg-surface-container-highest text-on-surface-variant rounded-full font-label-lg whitespace-nowrap hover:bg-surface-variant transition-colors">Vitamin</a>
+                <a href="detailkategori.html"
+                    class="flex-none px-5 py-2 bg-surface-container-highest text-on-surface-variant rounded-full font-label-lg whitespace-nowrap hover:bg-surface-variant transition-colors">Akuatik</a>
+                <a href="detailkategori.html"
+                    class="flex-none px-5 py-2 bg-surface-container-highest text-on-surface-variant rounded-full font-label-lg whitespace-nowrap hover:bg-surface-variant transition-colors">Vaksin</a>
             </div>
         </section>
         <!-- Category Grid Section -->
@@ -159,7 +159,7 @@
             <h2 class="font-headline-md text-on-surface mb-4">Kategori Produk</h2>
             <div class="grid grid-cols-2 gap-4">
                 <!-- Card: Antibiotik -->
-                <div
+                <a href="detailkategori.html"
                     class="group bg-white p-4 rounded-xl border border-secondary-container shadow-sm hover:border-primary transition-all cursor-pointer">
                     <div
                         class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-colors">
@@ -167,9 +167,9 @@
                     </div>
                     <h3 class="font-label-lg text-on-surface">Antibiotik</h3>
                     <p class="text-[10px] text-secondary mt-1">Pengendalian infeksi bakteri</p>
-                </div>
+                </a>
                 <!-- Card: Vitamin -->
-                <div
+                <a href="detailkategori.html"
                     class="group bg-white p-4 rounded-xl border border-secondary-container shadow-sm hover:border-primary transition-all cursor-pointer">
                     <div
                         class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-colors">
@@ -178,9 +178,9 @@
                     <h3 class="font-label-lg text-on-surface">Vitamin</h3>
                     <p class="text-[10px] text-secondary mt-1">Suplemen nutrisi esensial</p>
                     <p class="text-sm text-secondary mt-1">Stok: <span class="font-bold">12</span></p>
-                </div>
+                </a>
                 <!-- Card: Anti Coccidia -->
-                <div
+                <a href="detailkategori.html"
                     class="group bg-white p-4 rounded-xl border border-secondary-container shadow-sm hover:border-primary transition-all cursor-pointer">
                     <div
                         class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-colors">
@@ -189,9 +189,9 @@
                     </div>
                     <h3 class="font-label-lg text-on-surface">Anti Coccidia</h3>
                     <p class="text-[10px] text-secondary mt-1">Pencegahan koksidiosis</p>
-                </div>
+                </a>
                 <!-- Card: Antiparasit -->
-                <div
+                <a href="detailkategori.html"
                     class="group bg-white p-4 rounded-xl border border-secondary-container shadow-sm hover:border-primary transition-all cursor-pointer">
                     <div
                         class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-colors">
@@ -199,9 +199,9 @@
                     </div>
                     <h3 class="font-label-lg text-on-surface">Antiparasit</h3>
                     <p class="text-[10px] text-secondary mt-1">Pembasmi kutu &amp; cacing</p>
-                </div>
+                </a>
                 <!-- Card: Disinfektan -->
-                <div
+                <a href="detailkategori.html"
                     class="group bg-white p-4 rounded-xl border border-secondary-container shadow-sm hover:border-primary transition-all cursor-pointer">
                     <div
                         class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-colors">
@@ -209,9 +209,9 @@
                     </div>
                     <h3 class="font-label-lg text-on-surface">Disinfektan</h3>
                     <p class="text-[10px] text-secondary mt-1">Kebersihan kandang &amp; alat</p>
-                </div>
+                </a>
                 <!-- Card: Premix -->
-                <div
+                <a href="detailkategori.html"
                     class="group bg-white p-4 rounded-xl border border-secondary-container shadow-sm hover:border-primary transition-all cursor-pointer">
                     <div
                         class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-colors">
@@ -219,9 +219,9 @@
                     </div>
                     <h3 class="font-label-lg text-on-surface">Premix</h3>
                     <p class="text-[10px] text-secondary mt-1">Campuran pakan berkualitas</p>
-                </div>
+                </a>
                 <!-- Card: Akuatik -->
-                <div
+                <a href="detailkategori.html"
                     class="group bg-white p-4 rounded-xl border border-secondary-container shadow-sm hover:border-primary transition-all cursor-pointer">
                     <div
                         class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-colors">
@@ -229,9 +229,9 @@
                     </div>
                     <h3 class="font-label-lg text-on-surface">Akuatik</h3>
                     <p class="text-[10px] text-secondary mt-1">Obat ikan &amp; udang</p>
-                </div>
+                </a>
                 <!-- Card: Produk PMK -->
-                <div
+                <a href="detailkategori.html"
                     class="group bg-white p-4 rounded-xl border border-secondary-container shadow-sm hover:border-primary transition-all cursor-pointer">
                     <div
                         class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-3 group-hover:bg-primary-fixed transition-colors">
@@ -239,7 +239,7 @@
                     </div>
                     <h3 class="font-label-lg text-on-surface">Produk PMK</h3>
                     <p class="text-[10px] text-secondary mt-1">Penanganan kuku &amp; mulut</p>
-                </div>
+                </a>
             </div>
         </section>
         <!-- Featured Banner -->
@@ -253,9 +253,9 @@
                     <span class="text-[10px] uppercase tracking-widest text-white/80 font-bold mb-1">Promo Bulan
                         Ini</span>
                     <h2 class="text-white font-headline-md leading-tight max-w-[180px]">Diskon 15% Paket Vaksinasi</h2>
-                    <button
+                    <a href="toko.html"
                         class="mt-3 w-max px-4 py-1.5 bg-white text-primary text-[10px] font-bold rounded-lg active:scale-95 transition-transform">Cek
-                        Sekarang</button>
+                        Sekarang</a>
                 </div>
             </div>
         </section>

@@ -10,6 +10,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html',
+        toko: './toko.html',
+        katalog: './katalog.html',
+        detailCyprotil: './detail-cyprotil.html',
         produk: './produk.html',
         artikel: './artikel.html',
         chat: './chat.html',

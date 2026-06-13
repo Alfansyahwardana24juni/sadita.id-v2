@@ -1,245 +1,353 @@
 <!DOCTYPE html>
-
 <html lang="id">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>SADITA - Katalog Produk</title>
+    <title>SADITA Toko - Katalog Produk</title>
+    <meta name="description" content="Katalog produk kesehatan hewan SADITA dari gudang Bogor Timur." />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700,800,900&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-    </style>
-    <script id="tailwind-config">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
         tailwind.config = {
-            darkMode: "class",
             theme: {
                 extend: {
-                    "colors": {
-                        "primary-fixed-dim": "#ffb4a8",
-                        "tertiary-fixed": "#e2e2e2",
-                        "tertiary": "#2b2d2d",
-                        "on-primary-container": "#ff907f",
-                        "on-tertiary-fixed": "#1a1c1c",
-                        "surface-container-lowest": "#ffffff",
-                        "secondary-container": "#dcdddd",
-                        "surface-bright": "#fcf9f8",
-                        "on-tertiary-container": "#afafb0",
-                        "surface": "#fcf9f8",
-                        "surface-container-highest": "#e4e2e1",
-                        "on-tertiary-fixed-variant": "#454747",
-                        "surface-container-low": "#f6f3f2",
-                        "error-container": "#ffdad6",
-                        "outline-variant": "#e3beb8",
-                        "primary": "#610000",
-                        "surface-variant": "#e4e2e1",
-                        "secondary": "#5d5f5f",
-                        "on-primary": "#ffffff",
-                        "on-secondary": "#ffffff",
-                        "surface-tint": "#b52619",
-                        "on-secondary-fixed-variant": "#454747",
-                        "on-error-container": "#93000a",
-                        "on-background": "#1b1c1c",
-                        "inverse-primary": "#ffb4a8",
-                        "on-tertiary": "#ffffff",
-                        "on-secondary-container": "#5f6161",
-                        "error": "#ba1a1a",
-                        "tertiary-container": "#414343",
-                        "surface-dim": "#dcd9d9",
-                        "secondary-fixed-dim": "#c6c6c7",
-                        "outline": "#8e706b",
-                        "on-surface-variant": "#5a403c",
-                        "on-surface": "#1b1c1c",
-                        "surface-container": "#f0eded",
-                        "inverse-surface": "#303030",
-                        "on-secondary-fixed": "#1a1c1c",
-                        "primary-container": "#8b0000",
-                        "secondary-fixed": "#e2e2e2",
-                        "inverse-on-surface": "#f3f0f0",
-                        "surface-container-high": "#eae7e7",
-                        "on-primary-fixed-variant": "#920703",
-                        "on-primary-fixed": "#410000",
-                        "background": "#fcf9f8",
-                        "on-error": "#ffffff",
-                        "tertiary-fixed-dim": "#c6c6c7",
-                        "primary-fixed": "#ffdad4"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "spacing": {
-                        "stack-lg": "2rem",
-                        "stack-sm": "0.5rem",
-                        "stack-md": "1rem",
-                        "container-max": "512px",
-                        "margin-main": "1.25rem",
-                        "gutter-grid": "1rem"
-                    },
-                    "fontFamily": {
-                        "label-sm": ["Inter"],
-                        "label-lg": ["Inter"],
-                        "headline-md": ["Inter"],
-                        "display-sm": ["Inter"],
-                        "body-md": ["Inter"]
-                    },
-                    "fontSize": {
-                        "label-sm": ["10px", { "lineHeight": "14px", "fontWeight": "500" }],
-                        "label-lg": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
-                        "headline-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
-                        "display-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
-                    }
-                },
-            },
-        }
+                    colors: { primary: "#610000", background: "#fcf9f8", surface: "#f6f3f2", ink: "#1b1c1c", muted: "#5d5f5f", line: "#ead8d5", moss: "#31584a", amber: "#b7791f" },
+                    fontFamily: { sans: ["Inter", "sans-serif"] },
+                    borderRadius: { xl: "0.5rem", "2xl": "0.75rem" }
+                }
+            }
+        };
     </script>
+    <style>
+        body { font-family: Inter, sans-serif; }
+        .material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
 </head>
 
-<body class="bg-surface text-on-surface flex justify-center min-h-screen">
-    <!-- Mobile-centric Container (512px) -->
-    <main class="w-full max-w-[512px] bg-white relative pb-24 shadow-xl min-h-screen">
-        <!-- TopAppBar -->
-        <header
-            class="fixed top-0 w-full max-w-[512px] left-1/2 -translate-x-1/2 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none flex justify-between items-center px-5 h-16">
-            <button onclick="window.location.href='index.html'"
-                class="mr-2 text-red-900 dark:text-red-500 active:scale-95 duration-150">
-                <span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
-            </button>
-            <h1 class="text-xl font-black text-red-900 dark:text-red-500 tracking-tighter">SADITA</h1>
-            <div class="flex gap-4">
-                <button onclick="window.location.href='katalog.html'"
-                    class="text-red-900 dark:text-red-500 active:scale-95 duration-150">
-                    <span class="material-symbols-outlined" data-icon="location_on">location_on</span>
-                </button>
-                <button onclick="window.location.href='checkout.html'"
-                    class="text-red-900 dark:text-red-500 active:scale-95 duration-150 relative">
-                    <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
-                    <span
-                        class="absolute -top-1 -right-1 bg-red-900 text-white text-[8px] font-bold px-1.5 py-0.5 rounded-full">3</span>
-                </button>
+<body class="min-h-screen bg-slate-100 text-ink">
+    <div class="mx-auto min-h-screen w-full max-w-[512px] bg-background pb-24 shadow-2xl">
+        <header class="sticky top-0 z-50 border-b border-line bg-white/95 backdrop-blur">
+            <div class="flex h-16 items-center justify-between px-5">
+                <a href="toko.html" class="flex h-10 w-10 items-center justify-center rounded-xl text-primary" aria-label="Kembali ke pilih gudang"><span class="material-symbols-outlined">arrow_back</span></a>
+                <div class="text-center">
+                    <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-muted">SADITA Bogor Timur</p>
+                    <h1 class="text-base font-black text-primary">Katalog Produk</h1>
+                </div>
+                <a href="checkout.html" class="relative flex h-10 w-10 items-center justify-center rounded-xl text-primary" aria-label="Keranjang">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <span id="cartCount" class="absolute right-1 top-1 rounded-full bg-primary px-1.5 py-0.5 text-[9px] font-bold text-white">0</span>
+                </a>
             </div>
         </header>
-        <!-- Main Content Canvas -->
-        <div class="pt-16 px-5">
-            <!-- Selected Branch Section -->
-            <section
-                class="mt-6 p-4 bg-surface-container-low border border-outline-variant/30 rounded-xl flex items-center justify-between">
+
+        <main class="px-5 pt-5">
+            <section class="rounded-2xl border border-line bg-white p-4 shadow-sm">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <span class="material-symbols-outlined text-[20px]" data-icon="store">store</span>
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-surface text-primary">
+                        <span class="material-symbols-outlined">store</span>
                     </div>
-                    <div>
-                        <p class="text-label-sm font-label-sm text-secondary uppercase tracking-wider">Cabang Terpilih
-                        </p>
-                        <h2 class="text-body-md font-headline-md font-bold text-on-surface">SADITA - Bogor Timur</h2>
+                    <div class="min-w-0 flex-1">
+                        <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-muted">Cabang Terpilih</p>
+                        <h2 class="truncate text-sm font-bold">SADITA - Bogor Timur</h2>
                     </div>
-                </div>
-                <button onclick="window.location.href='katalog.html'"
-                    class="text-primary text-label-lg font-label-lg underline">Ubah</button>
-            </section>
-            <!-- Search & Filters -->
-            <section class="mt-6 flex flex-col gap-4">
-                <div class="relative">
-                    <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary"
-                        data-icon="search">search</span>
-                    <input
-                        class="w-full bg-surface-variant/50 border-none rounded-xl py-3 pl-10 pr-4 text-body-md focus:ring-2 focus:ring-primary/20"
-                        placeholder="Cari obat atau suplemen..." type="text" />
-                </div>
-                <!-- Category Chips -->
-                <div class="flex gap-2 overflow-x-auto hide-scrollbar pb-1">
-                    <button
-                        class="px-4 py-2 rounded-full bg-primary text-white text-label-lg flex-shrink-0">Semua</button>
-                    <button
-                        class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-label-lg flex-shrink-0 border border-outline-variant/30">Antibiotik</button>
-                    <button
-                        class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-label-lg flex-shrink-0 border border-outline-variant/30">Vitamin</button>
-                    <button
-                        class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-label-lg flex-shrink-0 border border-outline-variant/30">Vaksin</button>
-                    <button
-                        class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-label-lg flex-shrink-0 border border-outline-variant/30">Alat
-                        Medis</button>
+                    <a href="toko.html" class="text-xs font-bold uppercase tracking-wide text-primary">Ubah</a>
                 </div>
             </section>
-            <!-- Product Grid (2 Columns) -->
-            <section class="mt-8">
-                <div class="grid grid-cols-2 gap-4">
-                    <!-- Product Card 1 -->
-                    <a href="detail-cyprotil.html"
-                        class="bg-white border border-outline-variant/40 rounded-xl overflow-hidden shadow-sm flex flex-col transition-transform active:scale-[0.98]">
-                        <div class="aspect-square bg-surface-container relative">
-                            <img class="w-full h-full object-cover"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyX3r_MNqpuA1hYDpj19yXhD3hQsGQYZzSHBL67YahPMMh35KgmxbmAgr0GfD-9XkIf20igKbqBN7XaM1iYpm5cmORhsOfxppkmw8vawrYztH0ZTcmU9xb7tOP51iXuAORPLgDR8D91dBIDu2mdZnnoOsMXH1gxDb0Q4Dl6_YO9_UimQGvPVCmvN5x_ID4K9u-2yTAO-iaWlJCtLg4hUmJPY4AhiRQlEc_G4-QdOmzGvKjmqAfyEqEegd_6j5hBpY5Zo5wLjRu5teH" />
-                            <span
-                                class="absolute top-2 left-2 bg-primary text-white text-[9px] font-bold px-2 py-1 rounded">VITAMIN</span>
-                        </div>
-                        <div class="p-3 flex flex-col flex-grow">
-                            <h3 class="text-body-md font-semibold text-on-surface line-clamp-2 min-h-[40px]">Vet-Vital B
-                                Complex High Potency</h3>
-                            <p class="text-label-sm text-secondary mt-1">Botol 100ml</p>
-                            <p class="text-sm text-secondary mt-1">Stok: <span class="font-bold">8</span></p>
-                            <div class="mt-auto pt-3">
-                                <p class="text-body-md font-bold text-primary">Rp 125.000</p>
-                                <button onclick="window.location.href='checkout.html'"
-                                    class="mt-2 w-full bg-primary text-white py-2 rounded-lg text-label-lg font-bold flex items-center justify-center gap-1 active:scale-95 transition-transform">
-                                    <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
-                                    Tambah
-                                </button>
-                            </div>
+
+            <section class="mt-5 space-y-4">
+                <label class="relative block">
+                    <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-muted">search</span>
+                    <input id="productSearch" class="h-12 w-full rounded-2xl border border-line bg-white pl-12 pr-4 text-base shadow-sm placeholder:text-muted focus:border-primary focus:ring-primary/20" placeholder="Cari produk atau gejala, contoh CRD..." type="search" />
+                </label>
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="ai-konsultasi.html" class="flex items-start gap-3 rounded-2xl border border-line bg-white p-4 shadow-sm active:scale-[0.99]">
+                        <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary"><span class="material-symbols-outlined">forum</span></span>
+                        <span class="min-w-0">
+                            <span class="block text-sm font-black text-primary">Tanya dosis</span>
+                            <span class="mt-1 block text-xs leading-5 text-muted">Bawa data umur dan populasi ternak.</span>
+                        </span>
+                    </a>
+                    <a href="toko.html" class="flex items-start gap-3 rounded-2xl border border-line bg-white p-4 shadow-sm active:scale-[0.99]">
+                        <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-moss/10 text-moss"><span class="material-symbols-outlined">warehouse</span></span>
+                        <span class="min-w-0">
+                            <span class="block text-sm font-black text-primary">Ganti gudang</span>
+                            <span class="mt-1 block text-xs leading-5 text-muted">Cek stok dan estimasi kirim.</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="flex gap-2 overflow-x-auto pb-1 hide-scrollbar" aria-label="Filter kategori">
+                    <button type="button" class="filter-chip shrink-0 rounded-full bg-primary px-4 py-2 text-xs font-bold text-white" data-category="Semua">Semua</button>
+                    <button type="button" class="filter-chip shrink-0 rounded-full border border-line bg-white px-4 py-2 text-xs font-bold text-muted" data-category="Pernapasan">Pernapasan</button>
+                    <button type="button" class="filter-chip shrink-0 rounded-full border border-line bg-white px-4 py-2 text-xs font-bold text-muted" data-category="Vitamin">Vitamin</button>
+                    <button type="button" class="filter-chip shrink-0 rounded-full border border-line bg-white px-4 py-2 text-xs font-bold text-muted" data-category="Sanitasi">Sanitasi</button>
+                    <button type="button" class="filter-chip shrink-0 rounded-full border border-line bg-white px-4 py-2 text-xs font-bold text-muted" data-category="Premix">Premix</button>
+                </div>
+                <div class="flex items-center justify-between">
+                    <p id="productCount" class="text-sm font-semibold text-muted">8 produk tersedia</p>
+                    <label class="flex items-center gap-1 rounded-xl border border-line bg-white px-3 py-2 text-xs font-bold text-primary">
+                        <span class="material-symbols-outlined text-[18px]">sort</span>
+                        <select id="sortSelect" class="border-0 bg-transparent p-0 text-xs font-bold text-primary focus:ring-0">
+                            <option value="popular">Terpopuler</option>
+                            <option value="price-low">Harga rendah</option>
+                            <option value="price-high">Harga tinggi</option>
+                            <option value="stock-high">Stok terbanyak</option>
+                        </select>
+                    </label>
+                </div>
+            </section>
+
+            <section id="productGrid" class="mt-5 grid grid-cols-2 gap-4"></section>
+
+            <section id="emptyProducts" class="mt-5 hidden rounded-2xl border border-dashed border-line bg-white p-6 text-center">
+                <span class="material-symbols-outlined text-4xl text-muted">search_off</span>
+                <h2 class="mt-3 text-lg font-black text-primary">Produk tidak ditemukan</h2>
+                <p class="mt-2 text-sm leading-6 text-muted">Coba kata kunci lain atau pilih kategori Semua.</p>
+            </section>
+
+            <section class="mt-5 hidden grid-cols-2 gap-4" aria-hidden="true">
+                <a href="detail-cyprotil.html" class="group overflow-hidden rounded-2xl border border-line bg-white shadow-sm active:scale-[0.98]">
+                    <div class="relative aspect-square bg-surface">
+                        <img class="h-full w-full object-cover" alt="Cyprotil 250 mg soluble powder" src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=700&q=80" />
+                        <span class="absolute left-2 top-2 rounded bg-primary px-2 py-1 text-[9px] font-black text-white">20% OFF</span>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="min-h-[40px] text-sm font-bold leading-5">Cyprotil 250 mg</h3>
+                        <p class="mt-1 text-[11px] font-semibold text-muted">Antibiotik - 100g</p>
+                        <div class="mt-2 flex items-center gap-1 text-[11px] font-bold text-amber"><span class="material-symbols-outlined text-[15px]" style="font-variation-settings:'FILL' 1;">star</span>4.9 <span class="text-muted">(248)</span></div>
+                        <p class="mt-2 text-sm font-black text-primary">Rp 125.000</p>
+                        <p class="text-[11px] font-semibold text-moss">Stok 1.850 pcs</p>
+                    </div>
+                </a>
+
+                <a href="detail-cyprotil.html" class="group overflow-hidden rounded-2xl border border-line bg-white shadow-sm active:scale-[0.98]">
+                    <div class="relative aspect-square bg-surface">
+                        <img class="h-full w-full object-cover" alt="Vet Vital B Complex" src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=700&q=80" />
+                        <span class="absolute left-2 top-2 rounded bg-moss px-2 py-1 text-[9px] font-black text-white">VITAMIN</span>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="min-h-[40px] text-sm font-bold leading-5">Vet-Vital B Complex</h3>
+                        <p class="mt-1 text-[11px] font-semibold text-muted">Botol 100 ml</p>
+                        <div class="mt-2 flex items-center gap-1 text-[11px] font-bold text-amber"><span class="material-symbols-outlined text-[15px]" style="font-variation-settings:'FILL' 1;">star</span>4.8 <span class="text-muted">(92)</span></div>
+                        <p class="mt-2 text-sm font-black text-primary">Rp 85.000</p>
+                        <p class="text-[11px] font-semibold text-moss">Stok 420 pcs</p>
+                    </div>
+                </a>
+
+                <a href="detail-cyprotil.html" class="group overflow-hidden rounded-2xl border border-line bg-white shadow-sm active:scale-[0.98]">
+                    <div class="relative aspect-square bg-surface">
+                        <img class="h-full w-full object-cover" alt="Disinfectant farm care" src="https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=700&q=80" />
+                        <span class="absolute left-2 top-2 rounded bg-slate-700 px-2 py-1 text-[9px] font-black text-white">SANITASI</span>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="min-h-[40px] text-sm font-bold leading-5">Farm Shield Disinfectant</h3>
+                        <p class="mt-1 text-[11px] font-semibold text-muted">Jeriken 1 liter</p>
+                        <div class="mt-2 flex items-center gap-1 text-[11px] font-bold text-amber"><span class="material-symbols-outlined text-[15px]" style="font-variation-settings:'FILL' 1;">star</span>4.7 <span class="text-muted">(67)</span></div>
+                        <p class="mt-2 text-sm font-black text-primary">Rp 72.500</p>
+                        <p class="text-[11px] font-semibold text-moss">Stok 310 pcs</p>
+                    </div>
+                </a>
+
+                <a href="detail-cyprotil.html" class="group overflow-hidden rounded-2xl border border-line bg-white shadow-sm active:scale-[0.98]">
+                    <div class="relative aspect-square bg-surface">
+                        <img class="h-full w-full object-cover" alt="Premix poultry supplement" src="https://images.unsplash.com/photo-1606914469633-bd39206ea739?auto=format&fit=crop&w=700&q=80" />
+                        <span class="absolute left-2 top-2 rounded bg-amber px-2 py-1 text-[9px] font-black text-white">PREMIX</span>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="min-h-[40px] text-sm font-bold leading-5">Layer Plus Premix</h3>
+                        <p class="mt-1 text-[11px] font-semibold text-muted">Sachet 500 g</p>
+                        <div class="mt-2 flex items-center gap-1 text-[11px] font-bold text-amber"><span class="material-symbols-outlined text-[15px]" style="font-variation-settings:'FILL' 1;">star</span>4.8 <span class="text-muted">(131)</span></div>
+                        <p class="mt-2 text-sm font-black text-primary">Rp 98.000</p>
+                        <p class="text-[11px] font-semibold text-moss">Stok 260 pcs</p>
+                    </div>
+                </a>
+
+                <a href="detail-cyprotil.html" class="group overflow-hidden rounded-2xl border border-line bg-white shadow-sm active:scale-[0.98]">
+                    <div class="relative aspect-square bg-surface">
+                        <img class="h-full w-full object-cover" alt="Electrolyte poultry powder" src="https://images.unsplash.com/photo-1550572017-edd951aa8f72?auto=format&fit=crop&w=700&q=80" />
+                        <span class="absolute left-2 top-2 rounded bg-moss px-2 py-1 text-[9px] font-black text-white">VITAMIN</span>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="min-h-[40px] text-sm font-bold leading-5">Electrolyte Pro</h3>
+                        <p class="mt-1 text-[11px] font-semibold text-muted">Sachet 100 g</p>
+                        <div class="mt-2 flex items-center gap-1 text-[11px] font-bold text-amber"><span class="material-symbols-outlined text-[15px]" style="font-variation-settings:'FILL' 1;">star</span>4.6 <span class="text-muted">(55)</span></div>
+                        <p class="mt-2 text-sm font-black text-primary">Rp 32.500</p>
+                        <p class="text-[11px] font-semibold text-moss">Stok 780 pcs</p>
+                    </div>
+                </a>
+
+                <a href="detail-cyprotil.html" class="group overflow-hidden rounded-2xl border border-line bg-white shadow-sm active:scale-[0.98]">
+                    <div class="relative aspect-square bg-surface">
+                        <img class="h-full w-full object-cover" alt="Amino grow feed supplement" src="https://images.unsplash.com/photo-1516824711718-9c1e683412ac?auto=format&fit=crop&w=700&q=80" />
+                        <span class="absolute left-2 top-2 rounded bg-amber px-2 py-1 text-[9px] font-black text-white">SUPLEMEN</span>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="min-h-[40px] text-sm font-bold leading-5">Amino Grow Forte</h3>
+                        <p class="mt-1 text-[11px] font-semibold text-muted">Botol 250 ml</p>
+                        <div class="mt-2 flex items-center gap-1 text-[11px] font-bold text-amber"><span class="material-symbols-outlined text-[15px]" style="font-variation-settings:'FILL' 1;">star</span>4.7 <span class="text-muted">(74)</span></div>
+                        <p class="mt-2 text-sm font-black text-primary">Rp 115.000</p>
+                        <p class="text-[11px] font-semibold text-moss">Stok 190 pcs</p>
+                    </div>
+                </a>
+
+                <a href="detail-cyprotil.html" class="group overflow-hidden rounded-2xl border border-line bg-white shadow-sm active:scale-[0.98]">
+                    <div class="relative aspect-square bg-surface">
+                        <img class="h-full w-full object-cover" alt="Respiratory poultry medicine" src="https://images.unsplash.com/photo-1579165466741-7f35e4755660?auto=format&fit=crop&w=700&q=80" />
+                        <span class="absolute left-2 top-2 rounded bg-primary px-2 py-1 text-[9px] font-black text-white">ANTIBIOTIK</span>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="min-h-[40px] text-sm font-bold leading-5">Respira-Care Soluble</h3>
+                        <p class="mt-1 text-[11px] font-semibold text-muted">Sachet 250 g</p>
+                        <div class="mt-2 flex items-center gap-1 text-[11px] font-bold text-amber"><span class="material-symbols-outlined text-[15px]" style="font-variation-settings:'FILL' 1;">star</span>4.8 <span class="text-muted">(106)</span></div>
+                        <p class="mt-2 text-sm font-black text-primary">Rp 142.000</p>
+                        <p class="text-[11px] font-semibold text-moss">Stok 144 pcs</p>
+                    </div>
+                </a>
+
+                <a href="detail-cyprotil.html" class="group overflow-hidden rounded-2xl border border-line bg-white shadow-sm active:scale-[0.98]">
+                    <div class="relative aspect-square bg-surface">
+                        <img class="h-full w-full object-cover" alt="Calcium mineral supplement" src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=700&q=80" />
+                        <span class="absolute left-2 top-2 rounded bg-moss px-2 py-1 text-[9px] font-black text-white">MINERAL</span>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="min-h-[40px] text-sm font-bold leading-5">Calci Mineral Liquid</h3>
+                        <p class="mt-1 text-[11px] font-semibold text-muted">Botol 500 ml</p>
+                        <div class="mt-2 flex items-center gap-1 text-[11px] font-bold text-amber"><span class="material-symbols-outlined text-[15px]" style="font-variation-settings:'FILL' 1;">star</span>4.5 <span class="text-muted">(41)</span></div>
+                        <p class="mt-2 text-sm font-black text-primary">Rp 67.000</p>
+                        <p class="text-[11px] font-semibold text-moss">Stok 225 pcs</p>
+                    </div>
+                </a>
+            </section>
+        </main>
+
+        <nav class="fixed bottom-0 left-1/2 z-50 flex h-16 w-full max-w-[512px] -translate-x-1/2 items-center justify-around border-t border-line bg-white">
+            <a href="index.html" class="flex flex-col items-center text-muted"><span class="material-symbols-outlined">home</span><span class="text-[10px] font-semibold">Beranda</span></a>
+            <a href="toko.html" class="flex flex-col items-center text-muted"><span class="material-symbols-outlined">storefront</span><span class="text-[10px] font-semibold">Toko</span></a>
+            <a href="katalog.html" class="flex flex-col items-center text-primary"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">grid_view</span><span class="text-[10px] font-semibold">Produk</span></a>
+            <a href="checkout.html" class="flex flex-col items-center text-muted"><span class="material-symbols-outlined">receipt_long</span><span class="text-[10px] font-semibold">Order</span></a>
+        </nav>
+    </div>
+    <script>
+        const products = [
+            { id: "cyprotil-250", name: "Cyprotil 250 mg", category: "Pernapasan", label: "20% OFF", pack: "Antibiotik - 100g", rating: 4.9, reviews: 248, price: 125000, stock: 1850, image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=700&q=80", href: "detail-cyprotil.html", tags: "crd ngorok pernapasan antibiotik unggas ayam" },
+            { id: "vet-vital-b", name: "Vet-Vital B Complex", category: "Vitamin", label: "VITAMIN", pack: "Botol 100 ml", rating: 4.8, reviews: 92, price: 85000, stock: 420, image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=700&q=80", href: "detail-cyprotil.html", tags: "vitamin stamina nafsu makan pemulihan" },
+            { id: "farm-shield", name: "Farm Shield Disinfectant", category: "Sanitasi", label: "SANITASI", pack: "Jeriken 1 liter", rating: 4.7, reviews: 67, price: 72500, stock: 310, image: "https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=700&q=80", href: "detail-cyprotil.html", tags: "desinfektan sanitasi kandang kebersihan" },
+            { id: "layer-plus", name: "Layer Plus Premix", category: "Premix", label: "PREMIX", pack: "Sachet 500 g", rating: 4.8, reviews: 131, price: 98000, stock: 260, image: "https://images.unsplash.com/photo-1606914469633-bd39206ea739?auto=format&fit=crop&w=700&q=80", href: "detail-cyprotil.html", tags: "premix pakan mineral layer" },
+            { id: "electrolyte-pro", name: "Electrolyte Pro", category: "Vitamin", label: "VITAMIN", pack: "Sachet 100 g", rating: 4.6, reviews: 55, price: 32500, stock: 780, image: "https://images.unsplash.com/photo-1550572017-edd951aa8f72?auto=format&fit=crop&w=700&q=80", href: "detail-cyprotil.html", tags: "elektrolit vitamin lemas stres panas" },
+            { id: "amino-grow", name: "Amino Grow Forte", category: "Vitamin", label: "SUPLEMEN", pack: "Botol 250 ml", rating: 4.7, reviews: 74, price: 115000, stock: 190, image: "https://images.unsplash.com/photo-1516824711718-9c1e683412ac?auto=format&fit=crop&w=700&q=80", href: "detail-cyprotil.html", tags: "suplemen amino pertumbuhan pakan" },
+            { id: "respira-care", name: "Respira-Care Soluble", category: "Pernapasan", label: "ANTIBIOTIK", pack: "Sachet 250 g", rating: 4.8, reviews: 106, price: 142000, stock: 144, image: "https://images.unsplash.com/photo-1579165466741-7f35e4755660?auto=format&fit=crop&w=700&q=80", href: "detail-cyprotil.html", tags: "pernapasan ngorok crd antibiotik" },
+            { id: "calci-mineral", name: "Calci Mineral Liquid", category: "Vitamin", label: "MINERAL", pack: "Botol 500 ml", rating: 4.5, reviews: 41, price: 67000, stock: 225, image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=700&q=80", href: "detail-cyprotil.html", tags: "mineral kalsium vitamin tulang produksi" }
+        ];
+
+        const productGrid = document.getElementById("productGrid");
+        const emptyProducts = document.getElementById("emptyProducts");
+        const productSearch = document.getElementById("productSearch");
+        const productCount = document.getElementById("productCount");
+        const sortSelect = document.getElementById("sortSelect");
+        const cartCount = document.getElementById("cartCount");
+        let activeCategory = "Semua";
+
+        function formatRupiah(value) {
+            return new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumFractionDigits: 0 }).format(value);
+        }
+
+        function getCart() {
+            return JSON.parse(localStorage.getItem("saditaCart") || "[]");
+        }
+
+        function saveCart(cart) {
+            localStorage.setItem("saditaCart", JSON.stringify(cart));
+            updateCartCount();
+        }
+
+        function updateCartCount() {
+            const count = getCart().reduce((total, item) => total + item.qty, 0);
+            cartCount.textContent = count;
+        }
+
+        function addToCart(productId) {
+            const product = products.find((item) => item.id === productId);
+            const cart = getCart();
+            const existing = cart.find((item) => item.id === productId);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ ...product, qty: 1 });
+            }
+            saveCart(cart);
+        }
+
+        function renderProducts() {
+            const query = productSearch.value.trim().toLowerCase();
+            let result = products.filter((product) => {
+                const matchesCategory = activeCategory === "Semua" || product.category === activeCategory;
+                const haystack = `${product.name} ${product.category} ${product.pack} ${product.tags}`.toLowerCase();
+                return matchesCategory && haystack.includes(query);
+            });
+
+            if (sortSelect.value === "price-low") result = result.sort((a, b) => a.price - b.price);
+            if (sortSelect.value === "price-high") result = result.sort((a, b) => b.price - a.price);
+            if (sortSelect.value === "stock-high") result = result.sort((a, b) => b.stock - a.stock);
+            if (sortSelect.value === "popular") result = result.sort((a, b) => b.reviews - a.reviews);
+
+            productCount.textContent = `${result.length} produk tersedia`;
+            emptyProducts.classList.toggle("hidden", result.length > 0);
+            productGrid.innerHTML = result.map((product) => `
+                <article class="overflow-hidden rounded-2xl border border-line bg-white shadow-sm">
+                    <a href="${product.href}" class="block active:scale-[0.98]">
+                        <div class="relative aspect-square bg-surface">
+                            <img class="h-full w-full object-cover" alt="${product.name}" src="${product.image}" loading="lazy" />
+                            <span class="absolute left-2 top-2 rounded bg-primary px-2 py-1 text-[9px] font-black text-white">${product.label}</span>
                         </div>
                     </a>
-                    <!-- More cards omitted -->
-                </div>
-            </section>
-        </div>
-        <!-- BottomNavBar -->
-        <nav
-            class="fixed bottom-0 w-full max-w-[512px] left-1/2 -translate-x-1/2 z-50 rounded-t-xl bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] dark:shadow-none flex justify-around items-center px-4 h-16 pb-safe">
-            <a href="index.html"
-                class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 transition-all duration-300 hover:text-red-800">
-                <span class="material-symbols-outlined">home</span>
-                <span class="font-inter text-[11px] font-medium">Beranda</span>
-            </a>
-            <a href="katalog.html"
-                class="flex flex-col items-center justify-center text-red-900 dark:text-red-400 scale-110 transition-all duration-300">
-                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grid_view</span>
-                <span class="font-inter text-[11px] font-medium">Katalog</span>
-            </a>
-            <a href="checkout.html"
-                class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 transition-all duration-300 hover:text-red-800">
-                <span class="material-symbols-outlined">receipt_long</span>
-                <span class="font-inter text-[11px] font-medium">Riwayat</span>
-            </a>
-            <a href="tentangkami.html"
-                class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 transition-all duration-300 hover:text-red-800">
-                <span class="material-symbols-outlined">person</span>
-                <span class="font-inter text-[11px] font-medium">Profil</span>
-            </a>
-        </nav>
-    </main>
+                    <div class="p-3">
+                        <a href="${product.href}" class="block">
+                            <h3 class="min-h-[40px] text-sm font-bold leading-5">${product.name}</h3>
+                            <p class="mt-1 text-xs font-semibold text-muted">${product.pack}</p>
+                            <div class="mt-2 flex items-center gap-1 text-xs font-bold text-amber"><span class="material-symbols-outlined text-[15px]" style="font-variation-settings:'FILL' 1;">star</span>${product.rating} <span class="text-muted">(${product.reviews})</span></div>
+                            <p class="mt-2 text-base font-black text-primary">${formatRupiah(product.price)}</p>
+                            <p class="text-xs font-semibold text-moss">Stok ${product.stock.toLocaleString("id-ID")} pcs</p>
+                        </a>
+                        <button type="button" class="add-cart mt-3 flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-primary text-xs font-black text-white" data-id="${product.id}">
+                            <span class="material-symbols-outlined text-[17px]">add_shopping_cart</span>
+                            Tambah
+                        </button>
+                    </div>
+                </article>
+            `).join("");
+
+            document.querySelectorAll(".add-cart").forEach((button) => {
+                button.addEventListener("click", () => {
+                    addToCart(button.dataset.id);
+                    button.textContent = "Ditambahkan";
+                    setTimeout(() => {
+                        button.innerHTML = '<span class="material-symbols-outlined text-[17px]">add_shopping_cart</span>Tambah';
+                    }, 900);
+                });
+            });
+        }
+
+        document.querySelectorAll(".filter-chip").forEach((button) => {
+            button.addEventListener("click", () => {
+                activeCategory = button.dataset.category;
+                document.querySelectorAll(".filter-chip").forEach((chip) => {
+                    chip.classList.remove("bg-primary", "text-white");
+                    chip.classList.add("border", "border-line", "bg-white", "text-muted");
+                });
+                button.classList.add("bg-primary", "text-white");
+                button.classList.remove("border", "border-line", "bg-white", "text-muted");
+                renderProducts();
+            });
+        });
+
+        productSearch.addEventListener("input", renderProducts);
+        sortSelect.addEventListener("change", renderProducts);
+        updateCartCount();
+        renderProducts();
+    </script>
 </body>
 
 </html>
